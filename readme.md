@@ -60,13 +60,13 @@ Test graph inputs.
 #### Visual Representations of the given graphs
 
 <p><b>Graph1</b></p>
-<img src="graph_pics/graph1.png" width="300">
+<img src="graphs/graph1.png" width="300">
 
 <p><b>Graph2</b></p>
-<img src="graph_pics/graph2.png" width="300">
+<img src="graphs/graph2.png" width="300">
 
 <p><b>Graph3</b></p>
-<img src="graph_pics/graph3.png" width="300">
+<img src="graphs/graph3.png" width="300">
 
 ---
 
