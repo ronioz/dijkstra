@@ -14,11 +14,9 @@ void init(int n, int root){
     weights = malloc(n*sizeof(vectorInt));
     neighbours = malloc(n*sizeof(vectorInt));
     dist = malloc(n*sizeof(int));
-    visited = malloc(n*sizeof(int));
 
     for(int i = 0; i < n; i++){
         dist[i] = INT_MAX;
-        visited[i] = 0;
         init_vector(&weights[i]);
         init_vector(&neighbours[i]);
     }
