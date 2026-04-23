@@ -45,6 +45,11 @@ void pq_init(PriorityQueue* pq, int capacity){
     pq->size = 0;
     pq->capacity = capacity;
     pq->data = malloc(capacity * sizeof(PQNode));
+
+    if(pq->data == NULL){
+        fprintf(stderr, "Memory allocation failed in pq_init.\n");
+        exit(EXIT_FAILURE);
+    }
 }
 
 void pq_push(PriorityQueue* pq, int distance, int node) {

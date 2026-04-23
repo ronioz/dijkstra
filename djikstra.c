@@ -14,6 +14,11 @@ void init(int n, int root){
     neighbours = malloc(n*sizeof(vectorInt));
     dist = malloc(n*sizeof(int));
 
+    if(weights == NULL || neighbours == NULL || dist == NULL) {
+        fprtinf(stderr, "Memory allocation failed for main graph.\n");
+        exit(EXIT_FAILURE);
+    }
+
     for(int i = 0; i < n; i++){
         dist[i] = INT_MAX;
         init_vector(&weights[i]);

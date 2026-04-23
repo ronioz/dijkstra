@@ -5,6 +5,12 @@
 void init_vector(vectorInt* v){
     v->capacity = 4;
     v->data = malloc(v->capacity*sizeof(int));
+
+    if(v->data == NULL) {
+        fprintf(stderr, "Memory allocation failed in init_vector.\n");
+        exit(EXIT_FAILURE);
+    }
+
     v->size = 0;
 } //creating a vector
 
