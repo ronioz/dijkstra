@@ -49,9 +49,17 @@ void pq_init(PriorityQueue* pq, int capacity){
 
 void pq_push(PriorityQueue* pq, int distance, int node) {
     if(pq->size == pq->capacity){
-        pq->capacity *= 2;
-        pq->data = realloc(pq->data, pq->capacity*sizeof(PQNode)); //same technique as in vector_int implementation for O(1)
-    }
+        int new_capacity = pq->capacity * 2;
+        PQNode* temp = realloc(pq->data, new_capacity * sizeof(PQNode));
+
+        if(temp == NULL) {
+            fprintf(stderr, "Memory reallocation failed!\n");
+            exit(EXIT_FAILURE);
+        }
+
+        pq->data = temp;
+        pq->capacity = new_capacity;
+    } //same technique as in vector_int implementation for O(1)
 
     pq->data[pq->size].dist = distance;
     pq->data[pq->size].node = node;

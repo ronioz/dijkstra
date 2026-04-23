@@ -7,7 +7,6 @@
 vectorInt* weights;
 vectorInt* neighbours;
 
-int* visited;
 int* dist;
 
 void init(int n, int root){
@@ -37,7 +36,6 @@ void cleanup(int n){
     free(weights);
     free(neighbours);
     free(dist);
-    free(visited);
 } //cleaning up the allocated memory
 
 int main(){

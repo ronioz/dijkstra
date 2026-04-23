@@ -10,8 +10,17 @@ void init_vector(vectorInt* v){
 
 void push_back(vectorInt* v, int value){
     if(v->size == v->capacity){
-        v->capacity *= 2;
-        v->data = realloc(v->data, (v->capacity)*sizeof(int));
+        int new_capacity = v->capacity * 2;
+
+        int* temp = realloc(v->data, new_capacity * sizeof(int));
+
+        if(temp == NULL) {
+            fprintf(stderr, "Memory reallocation failed!\n");
+            exit(EXIT_FAILURE);
+        }
+
+        v->data = temp;
+        v->capacity = new_capacity;
     }
 
     v->data[v->size] = value; 
