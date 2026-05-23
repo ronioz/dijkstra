@@ -12,7 +12,7 @@ The graph is **0-indexed**, and all vertex IDs are in the range: `0` to `n-1`.
 
 ## Project Structure
 ```text
-├── djikstra.c
+├── dijkstra.c
 ├── vector_int.h
 ├── vector_int.c
 ├── priority_queue.h
@@ -25,7 +25,7 @@ The graph is **0-indexed**, and all vertex IDs are in the range: `0` to `n-1`.
 
 ### File Descriptions
 
-#### `djikstra.c`
+#### `dijkstra.c`
 
 Main file of the project. Responsible for:
 
@@ -104,7 +104,7 @@ Where:
 You must compile all source files together. Use `gcc`:
 
 ```bash
-gcc djikstra.c vector_int.c priority_queue.c -o main
+gcc dijkstra.c vector_int.c priority_queue.c -o main
 
 ```
 
